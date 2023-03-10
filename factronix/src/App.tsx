@@ -1,8 +1,7 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
-import { Button, Input } from "@mui/material";
+import { Button, Container, Input } from "@mui/material";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -14,13 +13,13 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <Container>
       <h1>Welcome to Factronix!</h1>
       <Input value={name} onChange={(e) => setName(e.target.value)} />
-      <Button onClick={greet}>a button</Button>
+      <Button onClick={greet}>Greet</Button>
       <p>{name}</p>
       <p>{greetMsg}</p>
-    </div>
+    </Container>
   );
 }
 
