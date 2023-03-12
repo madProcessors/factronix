@@ -3,6 +3,10 @@ import { invoke } from '@tauri-apps/api/tauri'
 import './App.css'
 import { Button, Container, Input } from '@mui/material'
 
+/**
+ * force arrow functions
+ */
+
 const App = () => {
   const [greetMsg, setGreetMsg] = useState('')
   const [name, setName] = useState('')

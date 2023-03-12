@@ -9,7 +9,7 @@
     ],
     "overrides": [],
     "parserOptions": {
-        "ecmaVersion": 6,
+        "ecmaVersion": 12,
         "sourceType": "module",
         "project": "./tsconfig.json",
         "ecmaFeatures": {
@@ -20,7 +20,15 @@
         "react"
     ],
     "rules": {
+        "no-console": "warn",
+        "no-var": "error",
         "react/react-in-jsx-scope": "off",
+        "prefer-arrow-callback": "error",
+        "no-restricted-syntax": [
+            "error",
+            "FunctionExpression[generator=false]:not(:has(ThisExpression))",
+            "FunctionDeclaration[generator=false]:not(:has(ThisExpression))"
+        ],
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/triple-slash-reference": "off",
         "@typescript-eslint/no-misused-promises": "off"
